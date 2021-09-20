@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <h1>“Hello World From Laravel v8.X (PHP v7.4.X)”</h1>
+        <h1>“Hello World From Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})”</h1>
         <title>Laravel</title>
 
         <!-- Fonts -->
