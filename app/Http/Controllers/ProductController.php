@@ -13,11 +13,11 @@ class ProductController extends Controller
      */
     public function listeProduits()
     {
-        return "Voici la liste de produits";
+        return view("product-list");
     }
 
     public function detailsProduit($id)
     {
-        return "Voici le detail du produit " . $id;
+        return view("product-details")->with('numero', $id);
     }
 }

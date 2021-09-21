@@ -22,15 +22,27 @@ Route::get('/', function () {
     return ('Page Accueil');
 });
 
+
+// routes
 // Route::get('/', function() { return 'Home page'; });
 // Route::get('/product', function() { return 'Liste des produits'; });
 // Route::get('/product/{id}', function($id) {return 'Fiche du produit '.$id;});
 // Route::get('/cart', function() { return 'Panier'; });
 
+
+// controllers
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/product', [ProductController::class, 'listeProduits']);
+// Route::get('/product/{id}', [ProductController::class, 'detailsProduit']);
+// Route::get('/cart', [CartController::class, 'cart']);
+
+
+
+// views
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/product', [ProductController::class, 'listeProduits']);
 
-Route::get('/product/{id}', [ProductController::class, 'detailsProduit']);
+Route::get('/product/{id}', [ProductController::class, 'detailsProduit'])->where('id','[0-9]+');
 
 Route::get('/cart', [CartController::class, 'cart']);
