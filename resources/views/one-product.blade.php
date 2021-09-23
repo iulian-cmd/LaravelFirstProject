@@ -1,9 +1,14 @@
 @extends('template')
 
 @section('titre')
-List products
+List of products
 @endsection
 
 @section('contenu')
-<h2>Je suis la page du Panier!</h2>
+<h2>Sorted by one article</h2>
+
+<div>
+    {{$product}}
+</div>
+
 @endsection

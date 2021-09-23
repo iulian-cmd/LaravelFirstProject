@@ -1,9 +1,17 @@
 @extends('template')
 
 @section('titre')
-Liste produits
+List of products
 @endsection
 
 @section('contenu')
-<h2>Je suis la page de la liste des produits...</h2>
+<h4>Page with the list of products and the price:</h4>
+@foreach($products as $product)
+<div>
+    Name of product: {{$product->nomProduct}}</br>
+    Price of product: EUR {{$product->prixProduct}} </br>
+    *
+</div>
+@endforeach
+
 @endsection

@@ -1,10 +1,9 @@
 @extends('template')
 
 @section('titre')
-Liste produits
+List of products
 @endsection
 
 @section('contenu')
-<h2>Je suis la page du produit {{$numero}}.</h2>
+<h2>Product number {{$numero}}.</h2>
 @endsection
- 

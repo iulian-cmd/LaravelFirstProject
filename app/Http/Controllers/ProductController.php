@@ -11,13 +11,13 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function listeProduits()
+    public function listProducts()
     {
         return view("product-list");
     }
 
-    public function detailsProduit($id)
+    public function detailsProduct($idProduct)
     {
-        return view("product-details")->with('numero', $id);
+        return view("product-details")->with('numero', $idProduct);
     }
 }
