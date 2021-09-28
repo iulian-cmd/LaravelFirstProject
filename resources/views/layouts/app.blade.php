@@ -25,7 +25,7 @@
                     <a class="nav-link" href="#">Catalogue</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{("cart")}}">Panier</a>
+                    <a class="nav-link" href="#">Panier</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>

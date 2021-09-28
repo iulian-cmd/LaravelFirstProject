@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ContactsController;
 use App\Http\Controllers\ProductModelController;
+use App\Http\Controllers\UrlsController;
 
 
 /*
@@ -21,7 +22,8 @@ use App\Http\Controllers\ProductModelController;
 */
 
 Route::get('/', function () {
-    return ('Page Accueil');
+    $notes = Notes::all();
+    return ('welcome')->with('notes', $notes);
 });
 
 
@@ -42,6 +44,7 @@ Route::get('/', function () {
 
 // views
 Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [UrlsController::class, 'create']);
 Route::get('/product', [ProductController::class, 'listProducts']);
 Route::get('/product/{id}', [ProductController::class, 'detailsProduct'])->where('idProduct','[0-9]+');
 Route::get('/cart', [CartController::class, 'cart']);
@@ -52,3 +55,4 @@ Route::get('/productmodel/{idProduct}', [ProductModelController::class, 'getById
 Route::get('/productmodel/nomProduct', [ProductModelController::class, 'getByNameProduct']);
 
 Route::get('/productmodel/prixProduct', [ProductModelController::class, 'getByPriceProduct']);
+// Route::get("/notes",function(){$notes = Notes::all();});
