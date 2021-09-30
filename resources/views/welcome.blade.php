@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+@extends('template')
+
 <html lang="en">
 
 <head>
@@ -8,7 +10,6 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>{{config('app.name')}}</title>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style=" background-color: #6CB2EB;">
         <a class="navbar-brand" href="#">Boutique à vélos</a>

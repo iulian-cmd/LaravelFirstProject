@@ -43,7 +43,11 @@ Route::get('/', function () {
 
 
 // views
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'welcome']);
+
+
+
+
 // Route::get('/', [UrlsController::class, 'create']);
 Route::get('/product', [ProductController::class, 'listProducts']);
 Route::get('/product/{id}', [ProductController::class, 'detailsProduct'])->where('idProduct','[0-9]+');
@@ -56,3 +60,10 @@ Route::get('/productmodel/nomProduct', [ProductModelController::class, 'getByNam
 
 Route::get('/productmodel/prixProduct', [ProductModelController::class, 'getByPriceProduct']);
 // Route::get("/notes",function(){$notes = Notes::all();});
+
+// Route::get('/', array('as' => 'accueil', function()
+// {
+//       $categories = Categorie::all();
+//       $articles = Article::select('id', 'title', 'intro_text')->orderBy('created_at', 'desc')->get();
+//       return View::make('accueil', array('categories' => $categories, 'articles' => $articles, 'actif' => 0));  
+//     }));
